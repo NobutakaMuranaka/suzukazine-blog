@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Blog.css";
 
 interface Post {
+  id: number;
   title: {
     rendered: string;
   };
@@ -38,19 +40,21 @@ export default function Blog({ post }: BlogProps) {
   return (
     <div className="container">
       <div className="blog-container">
-        <p className="blog-date">
-          {new Date(Date.now()).toLocaleDateString("en-US", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </p>
-        <h2 className="blog-title">{post.title.rendered}</h2>
-        <p
-          className="blog-excerpt"
-          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-        />
-        <img src={featuredImage} className="mask" />
+        <Link to={`/post/${post.id}`}>
+          <p className="blog-date">
+            {new Date(Date.now()).toLocaleDateString("en-US", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+          <h2 className="blog-title">{post.title.rendered}</h2>
+          <p
+            className="blog-excerpt"
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          />
+          <img src={featuredImage} className="mask" />
+        </Link>
       </div>
     </div>
   );
