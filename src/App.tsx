@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Blog from "./components/Blog";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,6 +39,7 @@ function App() {
           <Blog post={item} />
         ))}
       </div>
+      <Footer />
     </>
   );
 }
