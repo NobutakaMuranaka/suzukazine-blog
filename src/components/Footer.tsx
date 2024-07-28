@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="mt-20 bg-black w-full">
+      <div className="bg-black w-full">
         <ul className="flex text-white p-5 gap-12 place-content-center">
           <li>お問い合わせ</li>
           <li>プライバシーポリシー</li>
