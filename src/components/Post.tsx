@@ -20,7 +20,7 @@ function Post() {
 
   return (
     <>
-      <div>
+      <div className="my-7">
         {posts.map((item) => (
           <Blog post={item} />
         ))}
