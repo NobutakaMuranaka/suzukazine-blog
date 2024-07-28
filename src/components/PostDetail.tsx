@@ -43,14 +43,33 @@ function PostDetail() {
   }, [id]);
 
   if (!post) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center h-screen text-lg">
+        Loading...
+      </div>
+    );
   }
 
   return (
-    <div className="post-detail">
-      <h1>{post.title.rendered}</h1>
-      {featuredImage && <img src={featuredImage} alt={post.title.rendered} />}
-      <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+    <div className="container mx-auto p-4">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+        <div className="p-6">
+          <h1 className="text-4xl font-bold mb-4 border-b-4 border-gray-400 pb-2">
+            {post.title.rendered}
+          </h1>
+          {featuredImage && (
+            <img
+              src={featuredImage}
+              alt={post.title.rendered}
+              className="w-full h-auto mb-4 rounded-lg"
+            />
+          )}
+          <div
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
