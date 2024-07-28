@@ -8,8 +8,12 @@ function Footer() {
           <li>
             <Link to="/contact">お問い合わせ</Link>
           </li>
-          <li>プライバシーポリシー</li>
-          <li>運営者情報</li>
+          <li>
+            <Link to="/privacy-policy">プライバシーポリシー</Link>
+          </li>
+          <li>
+            <Link to="/profile">プロフィール</Link>
+          </li>
         </ul>
         <p className=" text-white p-5 text-center">
           2024 SUZUKAZINE All Rights Reserved
