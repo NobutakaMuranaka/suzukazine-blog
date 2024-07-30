@@ -25,24 +25,26 @@ interface BlogProps {
 }
 
 export default function Blog({ post }: BlogProps) {
-  const [featuredImage, setFeaturedimage] = useState<string | undefined>();
+  const [featuredImage, setFeaturedImage] = useState<string | undefined>();
 
   const getImage = () => {
-    axios.get(post?._links["wp:featuredmedia"][0]?.href).then((response) => {
-      setFeaturedimage(response.data.source_url);
-    });
+    if (post._links["wp:featuredmedia"]) {
+      axios.get(post._links["wp:featuredmedia"][0].href).then((response) => {
+        setFeaturedImage(response.data.source_url);
+      });
+    }
   };
 
   useEffect(() => {
     getImage();
-  }, []);
+  }, [post]);
 
   return (
     <div className="container">
       <div className="blog-container">
         <Link to={`/post/${post.id}`}>
           <p className="blog-date">
-            {new Date(Date.now()).toLocaleDateString("en-US", {
+            {new Date(post.date).toLocaleDateString("ja-JP", {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -53,7 +55,13 @@ export default function Blog({ post }: BlogProps) {
             className="blog-excerpt"
             dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
           />
-          <img src={featuredImage} className="mask" />
+          {featuredImage && (
+            <img
+              src={featuredImage}
+              className="mask"
+              alt={post.title.rendered}
+            />
+          )}
         </Link>
       </div>
     </div>
