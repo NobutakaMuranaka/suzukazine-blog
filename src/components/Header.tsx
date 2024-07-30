@@ -1,5 +1,3 @@
-// components/Header.tsx
-
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -12,13 +10,13 @@ function Header() {
             <Link to="/">ホーム</Link>
           </li>
           <li>
-            <Link to="/post/1">グルメ</Link>
+            <Link to="/category/グルメ">グルメ</Link>
           </li>
           <li>
-            <Link to="/post/2">生活</Link>
+            <Link to="/category/生活">生活</Link>
           </li>
           <li>
-            <Link to="/post/3">観光</Link>
+            <Link to="/category/観光">観光</Link>
           </li>
           <li>
             <Link to="/contact">お問い合わせ</Link>
