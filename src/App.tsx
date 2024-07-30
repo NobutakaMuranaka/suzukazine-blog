@@ -6,7 +6,8 @@ import PostDetail from "./components/PostDetail";
 import ContactPage from "./components/ContactPage";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Profile from "./components/Profile";
-import Category from "./components/Category"; // 修正されたインポート
+import Category from "./components/Category";
+import NotFound from "./components/404";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/category/:categoryName" element={<Category />} />{" "}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
