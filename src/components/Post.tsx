@@ -20,7 +20,7 @@ function Post() {
 
   return (
     <>
-      <div className="my-7">
+      <div className="flex max-w-4xl my-20 m-auto flex-wrap gap-20 justify-between">
         {posts.map((item) => (
           <Blog post={item} />
         ))}

@@ -49,7 +49,7 @@ function Category() {
   return (
     <>
       <h2 className="text-3xl font-bold my-5 text-center">{categoryName}</h2>
-      <div className="my-7">
+      <div className="flex max-w-4xl my-20 m-auto flex-wrap gap-20 justify-between">
         {posts.map((item) => (
           <Blog key={item.id} post={item} />
         ))}
