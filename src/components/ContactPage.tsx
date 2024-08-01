@@ -39,9 +39,9 @@ function ContactPage() {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
-        <div className="p-6">
+    <div className="container mx-auto py-10 max-w-3xl">
+      <div className="">
+        <div className="">
           <h1 className="text-4xl font-bold mb-4 border-b-4 border-gray-400 pb-2">
             {page.title.rendered}
           </h1>
