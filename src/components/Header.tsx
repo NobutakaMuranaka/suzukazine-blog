@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from "../image/suzukazine-logo.svg";
 
 function Header() {
   return (
     <>
-      <p className="text-center m-5 text-3xl font-bold">SUZUKAZINE</p>
+      <Link to="/">
+        <img src={logo} className="block m-auto w-80 py-2.5" />
+      </Link>
       <div className="bg-black w-full">
-        <ul className="flex text-white p-5 gap-12 place-content-center">
-          <li>
-            <Link to="/">ホーム</Link>
-          </li>
+        <ul className="flex text-white p-5 gap-24 place-content-center">
           <li>
             <Link to="/category/グルメ">グルメ</Link>
           </li>
