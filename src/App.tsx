@@ -14,6 +14,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Profile from "./components/Profile";
 import Category from "./components/Category";
 import NotFound from "./components/404";
+import SnsShare from "./components/SnsShare";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/category/:categoryName" element={<Category />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <SnsShare />
       <Footer />
     </Router>
   );
