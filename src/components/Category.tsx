@@ -9,9 +9,18 @@ interface Category {
   name: string;
 }
 
+interface Post {
+  id: number;
+  title: { rendered: string };
+  content: { rendered: string };
+  excerpt: { rendered: string };
+  _links: any;
+  date: string;
+}
+
 function Category() {
   const { categoryName } = useParams<{ categoryName: string }>();
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [category, setCategory] = useState<Category | null>(null);
 
   const fetchCategory = () => {

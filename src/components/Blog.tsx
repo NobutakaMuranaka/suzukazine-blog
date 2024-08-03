@@ -17,6 +17,7 @@ interface Post {
       }
     ];
   };
+  date: string;
 }
 
 interface BlogProps {
