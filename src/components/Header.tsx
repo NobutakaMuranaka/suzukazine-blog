@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from "../image/suzukazine-logo.svg";
 
 function Header() {
   return (
     <>
-      <Link to="/">
-        <img src={logo} className="block m-auto w-80 py-2.5" />
-      </Link>
+      <div className="p-5 text-center">
+        <p className="text-xl">SUZUKAZINE</p>
+      </div>
       <div className="bg-black w-full">
         <ul className="flex text-white p-5 gap-24 place-content-center">
           <li>
