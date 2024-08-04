@@ -25,7 +25,7 @@ function PostDetail() {
 
   const fetchPost = () => {
     axios
-      .get(`http://suzukazine.local/wp-json/wp/v2/posts/${id}`)
+      .get(`https://suzukazine.local/wp-json/wp/v2/posts/${id}`)
       .then((res) => {
         setPost(res.data);
         if (res.data._links["wp:featuredmedia"]) {

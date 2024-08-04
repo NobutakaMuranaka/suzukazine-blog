@@ -18,7 +18,7 @@ function ContactPage() {
   const fetchPage = () => {
     // 固定ページのスラッグが "contact" であることを前提とします
     axios
-      .get("http://suzukazine.local/wp-json/wp/v2/pages?slug=contact")
+      .get("https://suzukazine.local/wp-json/wp/v2/pages?slug=contact")
       .then((res) => {
         if (res.data.length > 0) {
           setPage(res.data[0]);

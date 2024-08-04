@@ -26,7 +26,7 @@ function Category() {
   const fetchCategory = () => {
     axios
       .get(
-        `http://suzukazine.local/wp-json/wp/v2/categories?slug=${categoryName}`
+        `https://suzukazine.local/wp-json/wp/v2/categories?slug=${categoryName}`
       )
       .then((res) => {
         if (res.data.length > 0) {
@@ -38,7 +38,7 @@ function Category() {
   const fetchPosts = (categoryId: number) => {
     axios
       .get(
-        `http://suzukazine.local/wp-json/wp/v2/posts?categories=${categoryId}`
+        `https://suzukazine.local/wp-json/wp/v2/posts?categories=${categoryId}`
       )
       .then((res) => {
         setPosts(res.data);

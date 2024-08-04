@@ -18,7 +18,7 @@ function Profile() {
   const fetchPage = () => {
     // 固定ページのスラッグが "profile" であることを前提とします
     axios
-      .get("http://suzukazine.local/wp-json/wp/v2/pages?slug=profile")
+      .get("https://suzukazine.local/wp-json/wp/v2/pages?slug=profile")
       .then((res) => {
         if (res.data.length > 0) {
           setPage(res.data[0]);
