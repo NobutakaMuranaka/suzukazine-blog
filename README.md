@@ -1,5 +1,5 @@
 # suzukazine
-**suzukazine** は、React、TypeScript、Tailwind CSS、Viteを使用して開発されたWordPressオリジナルテーマです。
+[**suzukazine**](https://suzukazine.com/)は、React、TypeScript、Tailwind CSS、Viteを使用して開発されたWordPressオリジナルテーマです。
 
 ## 依存関係
 
