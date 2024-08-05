@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# suzukazine
+**suzukazine** は、React、TypeScript、Tailwind CSS、Viteを使用して開発されたWordPressオリジナルテーマです。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 依存関係
 
-Currently, two official plugins are available:
+### 本番依存関係
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `axios`: HTTPリクエスト用ライブラリ。
+- `react`: コンポーネントベースのライブラリ。
+- `react-dom`: ReactのDOM操作ライブラリ。
+- `react-paginate`: ページネーションコンポーネント。
+- `react-router-dom`: ルーティングライブラリ。
+- `react-share`: ソーシャルメディア共有コンポーネント。
 
-## Expanding the ESLint configuration
+### 開発依存関係
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- `@tailwindcss/typography`: Tailwind CSSのタイポグラフィプラグイン。
+- `@testing-library/jest-dom`: Jest用のDOMアサーション。
+- `@testing-library/react`: Reactコンポーネントのテストライブラリ。
+- `@types/node`, `@types/react`, `@types/react-dom`: TypeScriptの型定義。
+- `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`: TypeScriptのESLintプラグインとパーサー。
+- `eslint`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`: コードリントツールとReact関連のESLintプラグイン。
+- `postcss`, `autoprefixer`: CSSのポスト処理ツール。
+- `tailwindcss`: ユーティリティファーストCSSフレームワーク。
+- `typescript`: TypeScriptコンパイラ。
+- `vite`, `vite-tsconfig-paths`: 高速ビルドツールとTypeScriptのパス解決プラグイン。
+- `vitest`, `@vitest/coverage-v8`: テストランナーとカバレッジツール。
