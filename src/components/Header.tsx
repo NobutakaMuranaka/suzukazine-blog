@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import Image from "../image/suzukazine-logo.svg";
 
 function Header() {
   return (
     <>
-      <div className="p-5 text-center">
-        <p className="text-xl">SUZUKAZINE</p>
+      <div className="p-5">
+        <Link to="/">
+          <img src={Image} className="block m-auto h-28" />
+        </Link>
       </div>
       <div className="bg-black w-full">
-        <ul className="flex text-white p-5 gap-24 place-content-center">
+        <ul className="flex text-white p-5 gap-16 place-content-center">
           <li>
             <Link to="/category/グルメ">グルメ</Link>
           </li>
@@ -16,9 +19,6 @@ function Header() {
           </li>
           <li>
             <Link to="/category/観光">観光</Link>
-          </li>
-          <li>
-            <Link to="/contact">お問い合わせ</Link>
           </li>
         </ul>
       </div>
