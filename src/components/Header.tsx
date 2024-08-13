@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Image from "../image/suzukazine-logo.svg";
+import Image from "@/image/suzukazine-logo.svg";
 
 function Header() {
   return (

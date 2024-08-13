@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: "/",
   build: {
-    outDir: path.resolve(process.cwd(), "src/dist"), // 出力ディレクトリをsrc/distに設定
-    assetsDir: "assets", // アセットディレクトリを設定
+    outDir: path.resolve(process.cwd(), "src/dist"),
+    assetsDir: "assets",
     rollupOptions: {
       input: {
-        main: path.resolve(process.cwd(), "index.html"), // エントリーポイントを設定
+        main: path.resolve(process.cwd(), "index.html"),
       },
       output: {
         entryFileNames: `assets/[name].js`,
