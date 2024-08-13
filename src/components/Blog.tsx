@@ -14,7 +14,7 @@ interface Post {
     ["wp:featuredmedia"]: [
       {
         href: string;
-      }
+      },
     ];
   };
   date: string;
