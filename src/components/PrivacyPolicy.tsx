@@ -18,7 +18,7 @@ function PrivacyPolicy() {
   const fetchPage = () => {
     // 固定ページのスラッグが "privacy-policy" であることを前提とします
     axios
-      .get("s://suzukazine.local/wp-json/wp/v2/pages?slug=privacy-policy")
+      .get("https://suzukazine.local/wp-json/wp/v2/pages?slug=privacy-policy")
       .then((res) => {
         if (res.data.length > 0) {
           setPage(res.data[0]);
