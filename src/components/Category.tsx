@@ -14,7 +14,13 @@ interface Post {
   title: { rendered: string };
   content: { rendered: string };
   excerpt: { rendered: string };
-  _links: any;
+  _links: {
+    ["wp:featuredmedia"]: [
+      {
+        href: string;
+      },
+    ];
+  };
   date: string;
 }
 
@@ -26,7 +32,7 @@ function Category() {
   const fetchCategory = () => {
     axios
       .get(
-        `https://suzukazine.local/wp-json/wp/v2/categories?slug=${categoryName}`
+        `https://suzukazine.local/wp-json/wp/v2/categories?slug=${categoryName}`,
       )
       .then((res) => {
         if (res.data.length > 0) {
@@ -38,7 +44,7 @@ function Category() {
   const fetchPosts = (categoryId: number) => {
     axios
       .get(
-        `https://suzukazine.local/wp-json/wp/v2/posts?categories=${categoryId}`
+        `https://suzukazine.local/wp-json/wp/v2/posts?categories=${categoryId}`,
       )
       .then((res) => {
         setPosts(res.data);
