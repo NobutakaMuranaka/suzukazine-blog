@@ -2,18 +2,33 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Blog from "./Blog";
 
+interface PostType {
+  id: number;
+  title: {
+    rendered: string;
+  };
+  excerpt: {
+    rendered: string;
+  };
+  _links: {
+    ["wp:featuredmedia"]: [
+      {
+        href: string;
+      },
+    ];
+  };
+  date: string;
+}
+
 function Post() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<PostType[]>([]);
 
   const fetchPosts = () => {
-    // Using axios to fetch the posts
-    axios.get("https://suzukazine.local/wp-json/wp/v2/posts").then((res) => {
-      // Saving the data to state
+    axios.get<PostType[]>("https://suzukazine.local/wp-json/wp/v2/posts").then((res) => {
       setPosts(res.data);
     });
   };
 
-  // Calling the function on page load
   useEffect(() => {
     fetchPosts();
   }, []);
