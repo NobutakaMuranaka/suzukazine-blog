@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <div className="bg-black w-full">
-        <ul className="flex text-white p-5 gap-12 place-content-center">
+        <ul className="flex text-white p-5 gap-4 place-content-center text-xs">
           <li>
             <Link to="/contact">お問い合わせ</Link>
           </li>
@@ -15,7 +15,7 @@ function Footer() {
             <Link to="/profile">プロフィール</Link>
           </li>
         </ul>
-        <p className=" text-white p-5 text-center">
+        <p className=" text-white p-5 text-center text-xs">
           2024 SUZUKAZINE All Rights Reserved
         </p>
       </div>
