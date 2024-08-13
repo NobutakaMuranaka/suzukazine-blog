@@ -58,9 +58,11 @@ function Category() {
   return (
     <>
       <h2 className="text-3xl font-bold my-5 text-center">{categoryName}</h2>
-      <div className="flex max-w-4xl my-20 m-auto flex-wrap gap-20 justify-between">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl my-20 m-auto p-2 sm:p-0">
         {posts.map((item) => (
-          <Blog key={item.id} post={item} />
+          <div key={item.id} className="flex justify-center">
+            <Blog key={item.id} post={item} />
+          </div>
         ))}
       </div>
     </>
