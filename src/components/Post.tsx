@@ -7,7 +7,7 @@ function Post() {
 
   const fetchPosts = () => {
     // Using axios to fetch the posts
-    axios.get("https://suzukazine.local/wp-json/wp/v2/posts").then((res) => {
+    axios.get("https://www.suzukazine.local/wp-json/wp/v2/posts").then((res) => {
       // Saving the data to state
       setPosts(res.data);
     });
