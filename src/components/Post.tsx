@@ -25,7 +25,7 @@ function Post() {
 
   const fetchPosts = () => {
     axios
-      .get<PostType[]>("https://suzukazine.local/wp-json/wp/v2/posts")
+      .get<PostType[]>("https://www.suzukazine.local/wp-json/wp/v2/posts")
       .then((res) => {
         setPosts(res.data);
       });
