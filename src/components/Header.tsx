@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import Image from "@/image/suzukazine-logo.svg";
+import Image from "../public/suzukazine-logo.svg";
 
 function Header() {
   return (
     <>
       <div className="p-5">
         <Link to="/">
-          <img src={Image} className="block m-auto h-28" />
+          <img src={Image} className="block m-auto h-28" alt="Suzukazine Logo" />
         </Link>
       </div>
       <div className="bg-black w-full">

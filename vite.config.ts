@@ -5,7 +5,7 @@ import * as path from "path";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  base: "/",
+  base: "./",
   build: {
     outDir: path.resolve(process.cwd(), "src/dist"),
     assetsDir: "assets",
