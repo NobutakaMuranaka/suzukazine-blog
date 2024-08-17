@@ -24,9 +24,11 @@ function Post() {
   const [posts, setPosts] = useState<PostType[]>([]);
 
   const fetchPosts = () => {
-    axios.get<PostType[]>("https://suzukazine.local/wp-json/wp/v2/posts").then((res) => {
-      setPosts(res.data);
-    });
+    axios
+      .get<PostType[]>("https://suzukazine.local/wp-json/wp/v2/posts")
+      .then((res) => {
+        setPosts(res.data);
+      });
   };
 
   useEffect(() => {

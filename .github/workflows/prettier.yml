@@ -9,8 +9,8 @@ jobs:
           ref: ${{ github.head_ref }}
       - uses: technote-space/get-diff-action@v6 #差分を取得する
         with:
-          PATTERNS: |
-            **/*.{ts,tsx,js,jsx,json}
+            PATTERNS: |
+              **/*.{ts,tsx,js,jsx,json,css,scss}
       - uses: actions/setup-node@v3 #nodeをインストール & キャッシュを取得
         with:
           node-version: 18
