@@ -6,7 +6,11 @@ function Header() {
     <>
       <div className="p-5">
         <Link to="/">
-          <img src={Image} className="block m-auto h-28" alt="Suzukazine Logo" />
+          <img
+            src={Image}
+            className="block m-auto h-28"
+            alt="Suzukazine Logo"
+          />
         </Link>
       </div>
       <div className="bg-black w-full">
